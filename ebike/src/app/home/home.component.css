@@ -47,3 +47,11 @@
   font-size: 1rem;
   color: #555;
 }
+
+#lottie {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+}
