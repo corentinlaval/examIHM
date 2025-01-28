@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Helmet",
+    "description": "A safety helmet for biking.",
+    "price": 50
+  },
+  {
+    "name": "Bike Light",
+    "description": "A light for your bike to ride at night.",
+    "price": 25
+  }
+]

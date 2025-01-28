@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Mountain Bike A",
+    "category": "Mountain Bike",
+    "description": "A sturdy mountain bike for trails.",
+    "price": 1200
+  },
+  {
+    "name": "Road Bike B",
+    "category": "Road Bike",
+    "description": "A lightweight road bike for speed.",
+    "price": 900
+  },
+  {
+    "name": "Road Bike E",
+    "category": "Road Bike",
+    "description": "A lightweight road bike for speed.",
+    "price": 1900
+  }
+]
