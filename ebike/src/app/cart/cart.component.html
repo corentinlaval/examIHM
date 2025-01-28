@@ -1,0 +1,39 @@
+<div class="cart-container">
+  <h1>Your Shopping Cart</h1>
+
+  <!-- Si le panier est vide -->
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Your cart is currently empty.</p>
+  </div>
+
+  <!-- Liste des articles dans le panier -->
+  <div *ngIf="cartItems.length > 0">
+    <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+      <div class="item-details">
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.description }}</p>
+        <p>Price: {{ item.price }} €</p>
+        <div class="quantity-control">
+          <button
+            (click)="decreaseQuantity(i)"
+            [disabled]="item.quantity === 1"
+          >
+            -
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(i)">+</button>
+        </div>
+        <p>Total: {{ item.price * item.quantity }} €</p>
+      </div>
+      <button (click)="removeFromCart(i)">Remove</button>
+    </div>
+
+    <!-- Total -->
+    <div class="cart-total">
+      <h2>Total: {{ calculateTotal() }} €</h2>
+    </div>
+
+    <!-- Bouton pour passer à la caisse -->
+    <button class="checkout-button" (click)="checkout()">Proceed to Checkout</button>
+  </div>
+</div>

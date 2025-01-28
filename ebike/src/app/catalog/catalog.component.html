@@ -1,0 +1,24 @@
+<div class="catalog-container">
+  <h1>Catalog</h1>
+
+  <!-- Filtres -->
+  <div class="filters">
+    <label for="category">Filter by Category:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="filterCatalog()">
+      <option value="">All</option>
+      <option value="Mountain">Mountain Bikes</option>
+      <option value="Road">Road Bikes</option>
+      <option value="Accessory">Accessories</option>
+    </select>
+  </div>
+
+  <!-- Liste des produits -->
+  <div class="catalog-items">
+    <div class="catalog-item" *ngFor="let item of filteredCatalog">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <p>Price: {{ item.price }} €</p>
+      <button (click)="addToCart(item)">Add to Cart</button>
+    </div>
+  </div>
+</div>
